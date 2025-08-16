@@ -98,14 +98,21 @@ sudo apt install -y nodejs
 ```
 <img width="519" height="26" alt="image" src="https://github.com/user-attachments/assets/d4f785be-3a92-4595-97e3-699d268885e9" />
 
-<img width="519" height="26" alt="image" src="https://github.com/user-attachments/assets/88b53bfa-bd77-4575-8bd8-60184e5a369e" />
+```bash
+node -v
+```
+<img width="354" height="30" alt="image" src="https://github.com/user-attachments/assets/b6238d9c-4854-4310-aa66-5fd6c7e8a31d" />
+
 
 ### Install npm (Node.js package manager)
 ```bash
 sudo apt install -y npm
 ```
-<img width="354" height="30" alt="image" src="https://github.com/user-attachments/assets/b6238d9c-4854-4310-aa66-5fd6c7e8a31d" />
+<img width="519" height="26" alt="image" src="https://github.com/user-attachments/assets/88b53bfa-bd77-4575-8bd8-60184e5a369e" />
 
+```bash
+npm -v
+```
 <img width="354" height="30" alt="image" src="https://github.com/user-attachments/assets/77db80d7-46ca-49a3-9e96-8635052dc761" />
 
 > Installs Node.js, npm, and Go .
