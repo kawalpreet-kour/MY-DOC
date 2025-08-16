@@ -55,11 +55,12 @@ License scanning is the process of analyzing all third-party and open-source dep
 
 ```mermaid
 flowchart LR
-A[Code Commit] --> B[Build Pipeline]
-B --> C[Unit Tests]
-C --> D[License Scanning]
-D --> E[Scan Report]
-E --> F[Approve / Reject Build]
+A[Code Commit] --> B[Clone Project Locally]
+B --> C[Install Dependencies]
+C --> D[Run Snyk Dependency Scan]
+D --> E[Generate JSON Report]
+E --> F[Convert to Readable Table]
+F --> G[Review Vulnerabilities & Take Action]
 ```
 
 ----
@@ -115,14 +116,15 @@ Based on ease of use, CI integration, and free tier availability, we recommend S
 
 ## FAQs
 
-1. **How do I integrate license scanning into my CI pipeline?**  
-   Use tools like Snyk or FOSSA in your build pipeline (e.g., Jenkins, GitHub Actions) to automatically scan dependencies during builds.
+1. **How do I run license and dependency scanning manually?**  
+   Clone the project, install dependencies, and run Snyk CLI.
 
-2. **What happens if a restricted license is detected?**  
-   The scanning tool can fail the build, generate an alert, or provide a report so the team can take corrective action before deployment.
+2. **What if a restricted license or vulnerability is found?**  
+   Check the report and fix issues manually before deployment.
 
-3. **Can license scanning detect security vulnerabilities too?**  
-   Some tools like Snyk and WhiteSource can scan both for license compliance and known security vulnerabilities in dependencies.
+3. **Can I detect security vulnerabilities too?**  
+   Yes, Snyk CLI scans both licenses and known vulnerabilities manually.
+
 
 ---
 ## Contact Information
