@@ -1,4 +1,4 @@
-# POC on GoLang CI Checks – Dependency Scanning
+# Documentation on GoLang CI Checks – Dependency Scanning
 
 <img width="210" height="169" alt="download" src="https://github.com/user-attachments/assets/b2917121-dc26-4da2-8858-cc655f199608" />
 
@@ -15,9 +15,8 @@
 |                 |         | Kawalpreet Kour  | L2              | Abhishek Dubey/Rishabh sharma |
 
 ---
-# Documentation: Dependency Scanning in Go Projects
 
----
+
 
 <details>
   <summary><h2><strong>Table of Contents</strong></h2></summary>
