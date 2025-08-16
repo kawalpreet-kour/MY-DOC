@@ -1,6 +1,8 @@
-# POC on Generic CI Operation – License Scanning
+# POC on Snyk – License Scanning
 
+<img width="210" height="169" alt="download" src="https://github.com/user-attachments/assets/9261c208-056b-4d32-af65-70bd88229b51" />
 
+---
 ## Author Information
 
 | Last Updated On | Version | Author           | Level           | Reviewer               |
@@ -36,7 +38,7 @@ This Proof of Concept (POC) demonstrates using Snyk to perform license scanning 
 
 ## Pre-Requisite 
 
-| Pre-Requisite                  | Description                                   |
+| Requirement                     | Description                                   |
 |--------------------------------|-----------------------------------------------|
 | Git installed                  | Required to clone and access the repository  |
 | Node.js and npm installed      | Needed to run Snyk CLI                        |
