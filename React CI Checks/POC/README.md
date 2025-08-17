@@ -1,9 +1,7 @@
 
 # POC on React CI Checks – Dependency Scanning
-
-
-
-<img width="210" height="169" alt="download" src="https://github.com/user-attachments/assets/9261c208-056b-4d32-af65-70bd88229b51" />
+<img width="120" height="174" alt="download" src="https://github.com/user-attachments/assets/869b8250-6bc8-4720-8cdb-f9dda8949fa0" />
+<img width="220" height="174" alt="download" src="https://github.com/user-attachments/assets/1a9c1057-d07f-4999-a714-a1719bcc286b" />
 
 ---
 ## Author Information
