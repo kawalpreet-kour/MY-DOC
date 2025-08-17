@@ -1,1 +1,108 @@
+# Documentation on Python CI Checks – Attendance API
+
+
+
+
+
+---
+## Author Information
+
+| Last Updated On | Version | Author           | Level           | Reviewer               |
+|-----------------|---------|------------------|-----------------|------------------------|
+| 16-08-2025      | V1.0    | Kawalpreet Kour  | Internal Review | Pritam                 |
+|                 |         | Kawalpreet Kour  | L0              | Shreya/Sharvari        |
+|                 |         | Kawalpreet Kour  | L1              | Abhishek V             |
+|                 |         | Kawalpreet Kour  | L2              | Abhishek Dubey/Rishabh sharma |
+
+---
+
+
+
+<details>
+  <summary><h2><strong>Table of Contents</strong></h2></summary>
+
+- [Introduction](#introduction)  
+- [What is Dependency Scanning?](#what-is-dependency-scanning)  
+- [Why Dependency Scanning?](#why-dependency-scanning)  
+- [Workflow Diagram](#workflow-diagram)  
+- [Different Tools](#different-tools)  
+- [Comparison](#comparison)  
+- [Advantages](#advantages)  
+- [Best Practices](#best-practices)  
+- [Conclusion](#conclusion)  
+- [FAQs](#faqs)  
+- [References](#references)  
+
+</details>
+## Introduction
+
+This document provides a guide to Python CI Bug Analysis for Attendance APIs, focusing on detecting code errors, bugs, security vulnerabilities, and ensuring reliable and maintainable functionality.
+
+---
+
+## What is Python CI Bug Analysis?
+
+Python CI Bug Analysis is the process of detecting errors, defects, or vulnerabilities in Python code.  
+It ensures code quality, correct functionality, and helps catch issues early in the development process.
+
+---
+
+## Why Perform CI Bug Analysis for Attendance Systems?
+
+Attendance APIs handle critical data like employee or student records, so analyzing bugs ensures reliability and security.
+
+| Reason                  | Description |
+|-------------------------|-------------|
+| Early Bug Detection      | Identify issues before production, reducing errors. |
+| Accurate Attendance Data | Ensures correct calculations and reporting. |
+| Security                 | Detect potential vulnerabilities in API logic and data handling. |
+| Maintainability          | Keeps code clean, readable, and easier to update or scale. |
+| Developer Feedback       | Provides quick feedback to developers for faster fixes. |
+
+---
+## Workflow Diagram
+
+```mermaid
+flowchart LR
+A[Code Commit] --> B[Install Dependencies]
+B --> C[Run Code Quality & Style Checks]
+C --> D[Run Security & Type Checks]
+D --> E[Run Functional/API Tests]
+E --> F[Generate Reports]
+F --> G[Review & Fix Bugs]
+G --> H[Code Approved for Merge]
+```
+---
+## Advantages
+
+| Advantage               | Description                                                   |
+|-------------------------|---------------------------------------------------------------|
+| Early Bug Detection      | Detect errors in API endpoints before deployment             |
+| Accurate Attendance Data | Ensures correct API responses                                 |
+| Security Awareness       | Highlights potential vulnerabilities in API logic            |
+| Lightweight Setup        | No server like SonarQube required                             |
+| Flexible & Customizable  | Manual execution allows fine-tuning per project needs         |
+
+---
+
+## Best Practices
+
+| Practice                  | Description                                                |
+|----------------------------|------------------------------------------------------------|
+| Run checks on every commit | Continuous feedback for developers                        |
+| Maintain API tests         | Use pytest to verify endpoint correctness                 |
+| Keep code style consistent | Enforce Python standards with PyLint/Flake8               |
+| Monitor security vulnerabilities | Run Bandit regularly to detect API security issues |
+| Consolidate reports        | Collect outputs from all tools and review before merging  |
+
+---
+
+## Contact Information
+
+| Name             | Email                          |
+|------------------|--------------------------------|
+| Kawalpreet Kour  | kawalpreet.kour.snaatak@mygurukulam.co |
+
+---
+## References
 
