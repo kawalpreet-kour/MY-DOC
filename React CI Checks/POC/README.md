@@ -103,12 +103,14 @@ node -v
 ```bash
 sudo apt install -y npm
 ```
-<img width="519" height="26" alt="image" src="https://github.com/user-attachments/assets/88b53bfa-bd77-4575-8bd8-60184e5a369e" />
+<img width="476" height="25" alt="image" src="https://github.com/user-attachments/assets/bf6e6961-322e-4027-8f0a-15fdda18d761" />
+
 
 ```bash
 npm -v
 ```
-<img width="354" height="30" alt="image" src="https://github.com/user-attachments/assets/77db80d7-46ca-49a3-9e96-8635052dc761" />
+<img width="331" height="36" alt="image" src="https://github.com/user-attachments/assets/3d617362-142c-491a-8cb1-69bb8581bd49" />
+
 
 > Installs Node.js, npm, and Go .
 
@@ -116,7 +118,7 @@ npm -v
 ```bash
 sudo npm install -g snyk
 ```
-<img width="1290" height="272" alt="Screenshot from 2025-08-16 14-32-28" src="https://github.com/user-attachments/assets/a7d02888-a576-4f21-aedc-2af94adcf390" />
+<img width="454" height="28" alt="image" src="https://github.com/user-attachments/assets/8d469d2e-cd25-4098-b0b2-e51e314f8a56" />
 
 >Installs Snyk CLI globally using npm.
 
@@ -124,7 +126,7 @@ sudo npm install -g snyk
 ```bash
 snyk auth <your-snyk-auth-token>
 ```
-<img width="618" height="87" alt="Screenshot from 2025-08-16 14-39-18" src="https://github.com/user-attachments/assets/e2e0da81-3d62-4202-87d9-c8398ecad331" />
+<img width="606" height="54" alt="image" src="https://github.com/user-attachments/assets/12c69192-c80a-4065-a2ce-09e7f39530c7" />
 
 >Authenticates your Snyk account to allow scanning of projects.
 
@@ -133,11 +135,13 @@ snyk auth <your-snyk-auth-token>
 ```bash
 npm install
 ```
+<img width="416" height="28" alt="image" src="https://github.com/user-attachments/assets/910ac16f-6527-4134-9b31-9cd4cfa408e9" />
 
 ### Run Dependency Scan
 ```bash
 snyk test --json > snyk-dependency-report.json
 ```
+<img width="641" height="24" alt="image" src="https://github.com/user-attachments/assets/d2a85e17-3d21-499b-8ad6-a0062a542a71" />
 
 > Scans project dependencies for vulnerabilities and saves the JSON report.
 
@@ -153,6 +157,7 @@ cat snyk-dependency-report.json | jq -r '
   ]) | @tsv
 '
 ```
+<img width="605" height="460" alt="image" src="https://github.com/user-attachments/assets/cd842383-f9b7-47ec-979c-88c9c7987ed5" />
 
 
 >Formats the dependency vulnerability report into a readable table showing Package, Version, Severity, and Direct Dependency.
@@ -161,11 +166,12 @@ cat snyk-dependency-report.json | jq -r '
 
 ## Troubleshooting
 
-| Issue                           | Solution                                                      |
-|---------------------------------|---------------------------------------------------------------|
-| snyk: command not found          | Ensure Snyk CLI is installed globally (`npm install -g snyk`) |
-| Scan fails to detect licenses    | Verify project dependencies are installed (`npm install`)     |
-| Authentication issues            | Run `snyk auth` again and verify account credentials          |
+| Issue                                           | Solution                                                                                               |
+|-------------------------------------------------|--------------------------------------------------------------------------------------------------------|
+| `snyk: command not found`                       | Ensure Snyk CLI is installed globally: `npm install -g snyk`                                           |
+| Scan fails to detect dependencies              | Run `npm install` first to install all project dependencies                                           |
+| `ENOTEMPTY` error during `npm install`         | Remove `node_modules` and `package-lock.json` then clean cache: `rm -rf node_modules package-lock.json && npm cache clean --force` |
+| High number of vulnerabilities in `npm audit`  | Run `npm audit fix` for safe fixes, or `npm audit fix --force` for all (including breaking changes)    |
 
 ---
 ## Best Practices
