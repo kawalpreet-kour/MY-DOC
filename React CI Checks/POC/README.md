@@ -185,13 +185,13 @@ cat snyk-dependency-report.json | jq -r '
 ## FAQs
 
 1. **Which package manager is used in this project?**  
-   Go modules (gomod).
+   Node.js with npm.
 
-2. **Which package managers are supported?**  
-  `snyk test --json > snyk-dependency-report.json`
+2. **How do I run a dependency scan?**  
+   Use `snyk test --json > snyk-dependency-report.json`.
 
-3. **How do I view the scan results?**  
-   Format the JSON report using `jq` to get a readable table.
+3. **How do I view scan results in a readable format?**  
+   Format the JSON report using `jq` to get a table of vulnerabilities.
 
 ---
 
