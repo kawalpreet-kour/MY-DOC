@@ -1,4 +1,4 @@
-# POC on VCS Implementation – Setup Authentication
+# VCS Implementation – Setup Authentication
 
 <img width="200" height="148" alt="download" src="https://github.com/user-attachments/assets/620e96b3-60e6-40c2-a532-be6d191b535f" />
 
@@ -105,13 +105,14 @@ It verifies that team-based permissions (Read/Write) are enforced as per roles, 
 | Reviewer  | Read/Write as assigned    |
 | Viewer    | Read only                 |
 
-<img width="450" height="200" alt="Screenshot from 2025-08-18 00-20-10" src="https://github.com/user-attachments/assets/672eb1bc-83c0-4d20-949f-e21f2c2ac9ea" />
+ <img width="450" height="200" alt="Screenshot from 2025-08-18 00-20-10" src="https://github.com/user-attachments/assets/672eb1bc-83c0-4d20-949f-e21f2c2ac9ea" />
 
-<img width="450" height="200" alt="Screenshot from 2025-08-18 00-20-10" src="https://github.com/user-attachments/assets/1d4b0d27-cabf-4ccb-9407-7a431c538515" />
+ <img width="450" height="200" alt="Screenshot from 2025-08-18 00-20-10" src="https://github.com/user-attachments/assets/1d4b0d27-cabf-4ccb-9407-7a431c538515" />
 
 
 <img width="450" height="200" alt="Screenshot from 2025-08-18 00-26-46" src="https://github.com/user-attachments/assets/3de109b0-1173-4820-97ff-bd2846316662" />
-<img width="450" height="200" alt="Screenshot from 2025-08-18 00-26-46" src="[https://github.com/user-attachments/assets/3de109b0-1173-4820-97ff-bd2846316662](https://github.com/user-attachments/assets/82acdf19-90b0-40fb-82f7-1e6e67ea48c9)" />
+
+<img width="450" height="200" alt="Screenshot from 2025-08-18 00-26-46" src="https://github.com/user-attachments/assets/82acdf19-90b0-40fb-82f7-1e6e67ea48c9" />
 
 
 ---
