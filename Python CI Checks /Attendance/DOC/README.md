@@ -28,7 +28,8 @@
 - [Workflow Diagram](#workflow-diagram)  
 - [Different Tools](#different-tools)  
 - [Comparison](#comparison)  
-- [Advantages](#advantages)  
+- [Advantages](#advantages) 
+- [Proof of Concept (POC)](#proof-of-concept-(poc)) 
 - [Best Practices](#best-practices)  
 - [Conclusion](#conclusion)  
 - [Contact Information](#contact-information)  
@@ -50,6 +51,7 @@ Bug Analysis is the process of finding and categorizing software defects during 
 ---
 
 ## Why Bug Analysis in CI?
+
 | Reason              | Explanation |
 |---------------------|-------------|
 | **Early Detection** | Bugs are identified before deployment, reducing costly fixes later. |
@@ -71,6 +73,7 @@ E --> F[Review Issues & Fix Code]
 F --> A
 ```
 ---
+
 ## Different Tools
 | Tool       | Notes |
 |------------|-------|
@@ -91,6 +94,7 @@ F --> A
 | **Ease of Use**         | Medium setup | Easy       | Easy         | Easy          |
 
 ---
+
 ## Advantages
 
 | Advantage             | Description                              |
@@ -101,6 +105,10 @@ F --> A
 | **Continuous Monitoring**  | Dashboards show live metrics.            |
 | **Time Saving**           | Less debugging post-deployment.          |
 
+---
+## Proof of Concept (POC)
+_Follow this link for POC_  
+(**[Click here to view Setup guide](https://github.com/Snaatak-Apt-Get-Swag/documentation/tree/SCRUM-165-kawalpreet/Applications/CI-Design/Python-CI-Checks/Bugs-Analysis/POC)**)
 
 ---
 
@@ -129,7 +137,7 @@ SonarQube is the best choice for Python CI Bug Analysis as it provides bug detec
 ## References
 | Description                 | Link                                                                 |
 |-----------------------------|----------------------------------------------------------------------|
-| **Python Language Support** | [SonarSource – Python Language](https://www.sonarsource.com/knowledge/languages/python/) |
+| **Sonar Language Support** | [SonarSource – Python Language](https://www.sonarsource.com/knowledge/languages/python/) |
 | **Python CI Guide**         | [RealPython – Continuous Integration](https://realpython.com/python-continuous-integration/) |
 | **SonarQube Documentation** | [Internal Repo – SonarQube Documentation](https://github.com/Snaatak-Apt-Get-Swag/documentation/blob/scrum-63-kawalpreet/Sonarqube/README.md) |
 
