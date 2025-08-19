@@ -44,7 +44,9 @@ This document provides a guide to Python CI Bug Analysis, focusing on detecting 
 ---
 
 ## What is Bug Analysis?
+
 Bug Analysis is the process of finding and categorizing software defects during CI.It helps detect coding errors, vulnerabilities, and test failures early for quick fixes.  
+
 ---
 
 ## Why Bug Analysis in CI?
