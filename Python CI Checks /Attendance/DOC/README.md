@@ -117,8 +117,7 @@ G --> H[Code Approved for Merge]
 ---
 ## Conclusion  
 
-SonarQube is the best choice for Python CI Bug Analysis as it provides bug detection, security checks, and detailed dashboards in one platform.  
-Its seamless CI/CD integration and multi-language support make it scalable and reliable for teams.  
+SonarQube is the best choice for Python CI Bug Analysis as it provides bug detection, security checks, and detailed dashboards in one platform.Its seamless CI/CD integration and multi-language support make it scalable and reliable for teams.  
 
 ---
 ## Contact Information
