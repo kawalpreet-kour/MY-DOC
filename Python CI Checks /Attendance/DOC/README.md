@@ -63,13 +63,12 @@ Bug Analysis is the process of finding and categorizing software defects during 
 
 ```mermaid
 flowchart LR
-A[Code Commit] --> B[Install Dependencies]
-B --> C[Run Code Quality & Style Checks]
-C --> D[Run Security & Type Checks]
-D --> E[Run Functional/API Tests]
-E --> F[Generate Reports]
-F --> G[Review & Fix Bugs]
-G --> H[Code Approved for Merge]
+A[Code Commit] --> B[Build Project]
+B --> C[Run Bug Analysis]
+C --> D[Run Tests]
+D --> E[Generate Report]
+E --> F[Review Issues & Fix Code]
+F --> A
 ```
 ---
 ## Different Tools
@@ -128,4 +127,9 @@ SonarQube is the best choice for Python CI Bug Analysis as it provides bug detec
 
 ---
 ## References
+| Description                 | Link                                                                 |
+|-----------------------------|----------------------------------------------------------------------|
+| **Python Language Support** | [SonarSource – Python Language](https://www.sonarsource.com/knowledge/languages/python/) |
+| **Python CI Guide**         | [RealPython – Continuous Integration](https://realpython.com/python-continuous-integration/) |
+| **SonarQube Documentation** | [Internal Repo – SonarQube Documentation](https://github.com/Snaatak-Apt-Get-Swag/documentation/blob/scrum-63-kawalpreet/Sonarqube/README.md) |
 
