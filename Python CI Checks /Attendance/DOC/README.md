@@ -23,18 +23,20 @@
   <summary><h2><strong>Table of Contents</strong></h2></summary>
 
 - [Introduction](#introduction)  
-- [What is Dependency Scanning?](#what-is-dependency-scanning)  
-- [Why Dependency Scanning?](#why-dependency-scanning)  
+- [What is Bug Analysis?](#what-is-bug-analysis)  
+- [Why Bug Analysis in CI?](#why-bug-analysis-in-ci)  
 - [Workflow Diagram](#workflow-diagram)  
 - [Different Tools](#different-tools)  
 - [Comparison](#comparison)  
 - [Advantages](#advantages)  
 - [Best Practices](#best-practices)  
 - [Conclusion](#conclusion)  
-- [FAQs](#faqs)  
+- [Contact Information](#contact-information)  
 - [References](#references)  
 
 </details>
+
+---
 ## Introduction
 
 This document provides a guide to Python CI Bug Analysis, focusing on detecting code errors, bugs, security vulnerabilities, and ensuring reliable and maintainable functionality.
