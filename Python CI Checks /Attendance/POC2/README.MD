@@ -63,24 +63,9 @@ This document provides a Proof of Concept (POC) for implementing Python  checks 
 _Follow this link for Installation_  
 (**[Click here to view Setup guide](https://github.com/Snaatak-Apt-Get-Swag/documentation/tree/89c6c6e8de0b6e6abbca8273c7f8ae0051f65c9b/Softwares/Java/Installation/Manual)**)
 
-
-```bash
-sudo apt update 
-```
-<img width="1447" height="612" alt="Screenshot 2025-08-16 162620" src="https://github.com/user-attachments/assets/e002874b-a32d-469b-9db7-ecb859703478" />
-
----
-### Step 2: Install java and verify
-
-```bash
-sudo apt install openjdk-17-jdk -y
-java -version
-```
-<img width="1522" height="493" alt="Screenshot 2025-08-16 162628" src="https://github.com/user-attachments/assets/c0fb479f-c7f2-4f58-a0e3-1a0376c43a7d" />
-
 ---
 
-### Step 3: Install SonarQube
+### Install SonarQube
 
 ```bash
 wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-10.5.1.90531.zip
