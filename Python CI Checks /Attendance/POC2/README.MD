@@ -182,7 +182,7 @@ cd directory
 
 #### Report for Attendance API
 
-<img width="1906" height="860" alt="Screenshot 2025-08-16 162852" src="https://github.com/user-attachments/assets/6a250a93-9e92-4502-b745-f3f732c69f64" />
+
 
 #### Report for Notificaton API
 
