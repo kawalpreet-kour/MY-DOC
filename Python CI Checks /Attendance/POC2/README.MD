@@ -115,7 +115,7 @@ sudo systemctl enable sonarqube
 ```bash
 http://<INSTANCE_PUBLIC_IP>:9000
 ```
-with the help of `username : admin ` and `password : admin`
+with the help of `username : admin ` and `password : Password`
 
 ---
 
