@@ -166,11 +166,14 @@ This file will dynamically render the following values into the `scylla.yaml` co
 
 ## FAQs
 
-**Q: Does this role install Scylla Monitoring/Manager?**  
-A: No, initial scope is only ScyllaDB installation & configuration. Extensions possible.  
-
 **Q: Can this role handle multi-node clusters?**  
-A: Yes, by defining `scylla_seeds` in variables and inventory.  
+**A:** Yes. By setting the `scylla_seeds` variable and providing an accurate inventory, the role can initialize and join multiple nodes into a cluster.
+
+**Q: Does the role install Scylla Manager or Monitoring Stack?**  
+**A:** Not in the initial version. These can be implemented in future iterations.
+
+**Q: How do I override default config values?**  
+**A:** Use `group_vars` or `host_vars` in your playbook to override variables.
 
 ---
 
