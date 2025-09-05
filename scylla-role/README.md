@@ -125,7 +125,7 @@ scylladb-ansible-role/
 | **`scylla_rpc_address`**    | RPC IP address                       | `{{ ansible_host }}`             |
 
 
-🔹 The template **`scylla.yaml.j2`** will render these variables dynamically.
+
 ### Template: `scylla.yaml.j2`
 
 This file will dynamically render the following values into the `scylla.yaml` config:
