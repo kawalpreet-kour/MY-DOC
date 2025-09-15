@@ -19,23 +19,22 @@
 <details>
   <summary><h2><strong>Table of Contents</strong></h2></summary>
 
-1. [Introduction](#introduction)
-2. [What is Terraform Drift?](#what-is-terraform-drift)
-3. [Why is Drift Detection Necessary?](#why-is-drift-detection-necessary)
-4. [Advantages](#advantages)
-5. [Workflow for Drift Detection](#workflow-for-drift-detection)
-6. [Workflow Steps](#workflow-steps)
-7. [Design Strategy](#design-strategy)
-   - [Core Components](#core-components)
-8. [Tools Used](#tools-used)
-9. [Automation Approach](#automation-approach)
-10. [Best Practices](#best-practices)
-11. [FAQs](#faqs)
-12. [Contact Information](#contact-information)
-13. [References](#references)
+- [Introduction](#introduction)
+- [What is Terraform Drift?](#what-is-terraform-drift)
+- [Why is Drift Detection Necessary?](#why-is-drift-detection-necessary)
+- [Advantages](#advantages)
+- [Workflow for Drift Detection](#workflow-for-drift-detection)
+- [Workflow Steps](#workflow-steps)
+- [Design Strategy](#design-strategy)
+  - [Core Components](#core-components)
+- [Tools Used](#tools-used)
+- [Automation Approach](#automation-approach)
+- [Best Practices](#best-practices)
+- [FAQs](#faqs)
+- [Contact Information](#contact-information)
+- [References](#references)
 
 </details>
-
 
 ---
 
@@ -183,7 +182,7 @@ The design focuses on ensuring automated, repeatable, and secure drift detection
 
 ---
 
-##References
+## References
 
 | Description | Link |
 |------------|------|
