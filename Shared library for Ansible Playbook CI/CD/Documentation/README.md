@@ -38,7 +38,7 @@ This documentation provides a comprehensive guide for automating and standardizi
 ---
 
 
-### Pr-erequisites
+### Pre-requisites
 
 | Tool / Requirement     | Minimum Version / Notes                     | Purpose / Description                              |
 |------------------------|--------------------------------------------|---------------------------------------------------|
