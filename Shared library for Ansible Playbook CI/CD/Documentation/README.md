@@ -42,11 +42,11 @@ This documentation provides a comprehensive guide for automating and standardizi
 
 | Tool / Requirement     | Minimum Version / Notes                     | Purpose / Description                              |
 |------------------------|--------------------------------------------|---------------------------------------------------|
-| Git                    | Latest stable                               | Version control and repository management        |
-| Ansible                | ≥ 2.13                                     | Automation of playbooks and roles                |
-| CI/CD Tool             | Jenkins, GitLab CI/CD, or similar          | Pipeline automation                               |
-| Python                 | 3.x                                        | Required for Ansible and supporting scripts      |
-| SSH Access             | N/A                                        | Secure access to target servers for deployment   |
+| **Git**                    | Latest stable                               | Version control and repository management        |
+| **Ansible**                | ≥ 2.13                                     | Automation of playbooks and roles                |
+| **CI/CD Tool**             | Jenkins, GitLab CI/CD, or similar          | Pipeline automation                               |
+| **Python**                 | 3.x                                        | Required for Ansible and supporting scripts      |
+| **SSH Access**             | N/A                                        | Secure access to target servers for deployment   |
 
 
 ---
