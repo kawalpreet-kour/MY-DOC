@@ -33,7 +33,7 @@
 
 ## Introduction
 
-This documentation provides a comprehensive guide for automating and standardizing deployment pipelines using Ansible roles and playbooks, including setup instructions, CI/CD process overview, configurations, and best practices.
+This documentation explains the purpose, setup instructions, CI/CD workflow, required configurations, and known limitations for using this shared Ansible Playbook library.
 
 ---
 
@@ -58,25 +58,26 @@ This documentation provides a comprehensive guide for automating and standardizi
 
 ### Setup Steps
 
-| Step                         | Command / Action                                                                                     | Description                                               |
-|-------------------------------|----------------------------------------------------------------------------------------------------|-----------------------------------------------------------|
-| **Clone the Repository**          | ```bash git clone <repository_url> ansible-cicd-library cd ansible-cicd-library ```                | **Downloads the shared library and navigates into it**       |
-| **Install Dependencies**          | ```bash ansible-galaxy install -r requirements.yml ```                                             | **Installs required Ansible roles and dependencies**         |
-| **Configure Environment Variables** | Update `.env` or CI/CD secret variables: <br>- `TARGET_ENV` (dev/test/prod) <br>- `SSH_KEY_PATH` (path to private key) <br>- `ANSIBLE_CONFIG` (optional) <br>- Any project-specific variables | Sets environment-specific configuration for deployment  |
-| **Verify Setup**                  | ```bash ansible-playbook tests/test.yml --check ```                                                | **Runs a dry-run to ensure the setup is functional**        |
+| Step                                | Command / Action                                                                                                                                                                              | Description                                            |
+| ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
+| **Clone the Repository**            | ```bash git clone <repository_url> ansible-cicd-library cd ansible-cicd-library ```                                                                                                           | Downloads the shared library and navigates into it     |
+| **Install Dependencies**            | ```bash ansible-galaxy install -r requirements.yml ```                                                                                                                                        | Installs required Ansible roles and dependencies       |
+| **Configure Environment Variables** | Update `.env` or CI/CD secret variables: <br>- `TARGET_ENV` (dev/test/prod) <br>- `SSH_KEY_PATH` (path to private key) <br>- `ANSIBLE_CONFIG` (optional) <br>- Any project-specific variables | Sets environment-specific configuration for deployment |
+| **Verify Setup**                    | ```bash ansible-playbook tests/test.yml --check ```                                                                                                                                           | Runs a dry-run to ensure the setup is functional       |
 
 ---
-### CI/CD Process Workflow
+
+## CI/CD Process Workflow
 
 | Stage                        | Description                                                                                   |
 |-------------------------------|-----------------------------------------------------------------------------------------------|
-| **Code Checkout**                 | Pull latest roles and playbooks from the repository                                           |
-| **Linting & Syntax Check**        | Validate YAML and playbook syntax using `ansible-lint` and `ansible-playbook --syntax-check` |
-| **Unit Testing**                  | Run Molecule or custom test playbooks to verify roles                                         |
-| **Artifact Packaging**            | Bundle roles, playbooks, and templates for deployment                                         |
-| **Deployment**                    | Apply playbooks to the target environment (Dev/QA/Prod)                                       |
-| **Post-Deployment Verification**  | Perform smoke tests, service checks, or log validation                                        |
-| **Notifications**                | Send success/failure status to CI/CD tool or Slack/email                                      |
+| **Code Checkout**             | Pull latest roles and playbooks from the repository                                           |
+| **Linting & Syntax Check**    | Validate YAML and playbook syntax using `ansible-lint` and `ansible-playbook --syntax-check` |
+| **Unit Testing**              | Run Molecule or custom test playbooks to verify roles                                         |
+| **Artifact Packaging**        | Bundle roles, playbooks, and templates for deployment                                         |
+| **Deployment**                | Apply playbooks to the target environment (Dev/QA/Prod)                                       |
+| **Post-Deployment Verification** | Perform smoke tests, service checks, or log validation                                      |
+| **Notifications**             | Send success/failure status to CI/CD tool or Slack/email                                      |
 
 
 ---
