@@ -1,4 +1,5 @@
 # Ansible Role & Playbook CI/CD Documentation
+![download](https://github.com/user-attachments/assets/d9bc92b4-3d4c-4c23-8417-11deb1be8f7e)
 
 ---
 
