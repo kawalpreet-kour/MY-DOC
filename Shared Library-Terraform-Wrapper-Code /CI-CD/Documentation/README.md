@@ -42,15 +42,8 @@ This document describes the **Shared Library** for Terraform wrapper CI/CD pipel
 
 ## What is the Shared Library?
 
-The **Shared Library** is a set of scripts, functions, and helper utilities that encapsulate common Terraform operations, such as:
+The **Shared Library** is a set of scripts and functions that handle common Terraform tasks like initializing, validating, planning, applying, and destroying resources. It is used by multiple Terraform wrapper scripts to ensure a consistent CI/CD process.
 
-- Initialization (`init`)  
-- Validation (`validate`)  
-- Planning (`plan`)  
-- Applying changes (`apply`)  
-- Destroying resources (`destroy`)  
-
-It is designed to be called from multiple Terraform wrapper scripts across different repositories, ensuring consistency in CI/CD execution.
 
 ---
 
@@ -103,38 +96,30 @@ The shared library is integrated into wrapper scripts via **sourcing or importin
 
 ## Required Configurations
 
-### Backend Configuration
-- `backend.tfvars` must exist for each environment (`dev`, `staging`, `prod`).  
-- Example: S3 bucket + DynamoDB table for locking.
+| Configuration Type       | Details                                                                                   | Example / Notes                                           |
+|--------------------------|-------------------------------------------------------------------------------------------|-----------------------------------------------------------|
+| Backend Configuration    | Each environment must have a `backend.tfvars` file.                                        | S3 bucket + DynamoDB table for state locking             |
+| Environment Variables    | Must define the target environment (`ENV`) and optionally credentials for secret managers. | `export ENV=dev`                                         |
+| Variable Files           | Each environment has its own `main.tfvars` with resource parameters.                      | `environments/dev/main.tfvars`                            |
+| CI/CD Secrets            | Store sensitive values like API tokens or access keys in the CI/CD platform or secret manager. | GitHub/GitLab/Azure DevOps secrets, Vault, AWS Secrets Manager |
 
-### Environment Variables
-- Must define the target environment (`ENV`) and optionally credentials for secret managers.
-
-### Variable Files
-- Each environment has its own `main.tfvars` with resource parameters.
-
-### CI/CD Secrets
-- Platform secrets (GitHub/GitLab/Azure DevOps) should store sensitive values like API tokens or access keys.
 
 ---
 
 ## Environment Variable Handling
 
-- The shared library ensures all required environment variables are checked before execution.  
-- Example:
-
-```bash
-export ENV=dev
-export AWS_ACCESS_KEY_ID=xxxx
-export AWS_SECRET_ACCESS_KEY=xxxx
-Missing required variables trigger a controlled failure with descriptive logging.
-
-Secrets are never printed to console, and Terraform sensitive variables are marked with sensitive = true.
+| Item                      | Description                                                                 |
+|----------------------------|-----------------------------------------------------------------------------|
+| Required Environment Vars  | `ENV`, `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`                         |
+| Example                    | ```bash<br>export ENV=dev<br>export AWS_ACCESS_KEY_ID=xxxx<br>export AWS_SECRET_ACCESS_KEY=xxxx<br>``` |
+| Missing Variables Behavior | Triggers a controlled failure with descriptive logging                      |
+| Secrets Handling           | Secrets are never printed to console; Terraform sensitive variables are marked with `sensitive = true` |
 
 ---
 
 ## Workflow Diagram
 
+```mermaid
 graph TD
     A[Developer: Push Code / Merge PR] --> B[CI: Wrapper script calls Shared Library functions]
     B --> C[tf_init, tf_validate, tf_plan]
@@ -144,6 +129,7 @@ graph TD
     E -- Reject --> G[Pipeline Stops / Notify]
     F --> H[Infrastructure & State Updated]
     F -- Fail --> I[Notification: Apply Failed]
+
 ```
 ---
 ## Best Practices
