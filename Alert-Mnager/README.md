@@ -45,64 +45,11 @@ Application monitoring ensures the health, performance, and availability of serv
 
 ---
 
-## What Are Alerting Rules?
+## What is Alert Manager?
 
-Alerting rules are predefined conditions in Prometheus that continuously evaluate metrics.
-When a defined threshold is breached, an alert is generated and sent to **Alertmanager**, which processes and routes it to appropriate channels.
-
+**Alertmanager** is a component of the Prometheus monitoring stack that manages alerts by grouping, deduplicating, silencing, and routing them. It ensures that notifications reach the right teams through channels like Email, Slack, PagerDuty, or Webhooks, making alerts actionable and reducing noise.
 
 ---
-
-## Severity Levels
-
-Each alert should have a **severity label** defining its importance and response priority.
-
-| Severity Level | Definition                                              | Example Scenarios                             | Action / Response Time               |
-| -------------- | ------------------------------------------------------- | --------------------------------------------- | ------------------------------------ |
-| **Critical**   | Major outage or service down affecting users            | App or API not responding, database failure   | Immediate escalation to L2/L3        |
-| **High**       | Significant performance degradation or resource overuse | CPU > 90%, Memory > 85%, Error rate > 10%     | Response within 10–15 minutes        |
-| **Medium**     | Non-critical but needs attention                        | High latency, disk usage > 80%, queue backlog | Response within 30–45 minutes        |
-| **Low**        | Informational or minor issues                           | Service restart, config drift, warning events | Review in daily check or next sprint |
-
- *Severity helps prioritize response and reduces alert fatigue.*
-
----
-
-## Notification Channels
-
-Alertmanager supports multiple notification integrations for quick incident response.
-
-| Channel Type                | Purpose                           | Example / Tool         | Usage Scenario                                                   |
-| --------------------------- | --------------------------------- | ---------------------- | ---------------------------------------------------------------- |
-| **Email**                   | Default notification channel      | Gmail, Outlook         | For general system alerts                                        |
-| **Slack / Microsoft Teams** | Instant team collaboration        | Slack Incoming Webhook | For on-call & ops team notifications                             |
-| **PagerDuty / OpsGenie**    | Incident escalation management    | PagerDuty Integration  | For production-level critical alerts                             |
-| **SMS / Phone Call**        | Urgent, high-impact alerts        | Twilio / PagerDuty     | For critical outage alerts                                       |
-| **Webhook / Custom API**    | Integration with automation tools | REST endpoints         | For auto-remediation or ticket creation (e.g., ServiceNow, Jira) |
-
-
-
----
-
-## Escalation Process
-
-An escalation process ensures that unacknowledged alerts are automatically passed to higher levels.
-
-| Escalation Level         | Responsible Team            | Trigger Condition                | Escalation Time |
-| ------------------------ | --------------------------- | -------------------------------- | --------------- |
-| **Level 1 (L1)**         | On-call Engineer            | Alert triggered                  | Immediate       |
-| **Level 2 (L2)**         | Senior Engineer / App Owner | Alert unresolved > 15 mins       | 15 minutes      |
-| **Level 3 (L3)**         | DevOps / SRE Lead           | Alert unresolved > 30 mins       | 30 minutes      |
-| **Level 4 (Management)** | IT Manager / CTO            | Major outage continues > 60 mins | 1 hour          |
-
- **Automation:**
-Alertmanager routes alerts to **Slack → PagerDuty → Email** sequentially until acknowledgment is received.
-
- **Review:**
-Post-resolution, the team performs **RCA (Root Cause Analysis)** and updates alerting thresholds or rules if required.
-
----
-
 ## Process of App Monitoring using Alertmanager
 
 | Step  | Stage                        | Description                                                                 |
@@ -114,6 +61,12 @@ Post-resolution, the team performs **RCA (Root Cause Analysis)** and updates ale
 | **5** | **Notification Dispatch**    | Alerts sent to Slack, Email, or PagerDuty as per configuration.             |
 | **6** | **Escalation Handling**      | If not acknowledged, alerts are auto-escalated per escalation policy.       |
 | **7** | **Resolution & Review**      | Once resolved, alerts auto-close and RCA is performed.                      |
+
+---
+## What Are Alerting Rules?
+
+Alerting rules are predefined conditions in Prometheus that continuously evaluate metrics.
+When a defined threshold is breached, an alert is generated and sent to **Alertmanager**, which processes and routes it to appropriate channels.
 
 ---
 
@@ -132,6 +85,11 @@ Post-resolution, the team performs **RCA (Root Cause Analysis)** and updates ale
 | **App Restart Detected**   | Restart count > 3/hr          | Low      | Email                | L1 review daily   |
 
 ---
+
+
+
+---
+
 
 ## Advantages of Alerting
 
