@@ -80,12 +80,11 @@ Each alert should have a **severity label** defining its importance and response
 
 | Severity Level | Definition                                              | Example Scenarios                             | Action / Response Time               |
 | -------------- | ------------------------------------------------------- | --------------------------------------------- | ------------------------------------ |
-| **Critical**   | Major outage or service down affecting users            | App or API not responding, database failure   | Immediate escalation to L2/L3        |
+| **Critical**   | Major outage or service down affecting users            | App or API not responding, database failure   | Immediate escalation         |
 | **High**       | Significant performance degradation or resource overuse | CPU > 90%, Memory > 85%, Error rate > 10%     | Response within 10–15 minutes        |
 | **Medium**     | Non-critical but needs attention                        | High latency, disk usage > 80%, queue backlog | Response within 30–45 minutes        |
 | **Low**        | Informational or minor issues                           | Service restart, config drift, warning events | Review in daily check or next sprint |
 
-*Severity helps prioritize response and reduces alert fatigue.*
 
 ---
 
@@ -103,18 +102,6 @@ Alertmanager supports multiple notification integrations for quick incident resp
 
 ---
 
-## Escalation Process
-
-An escalation process ensures that unacknowledged alerts are automatically passed to higher levels.
-
-| Escalation Level         | Responsible Team            | Trigger Condition                | Escalation Time |
-| ------------------------ | --------------------------- | -------------------------------- | --------------- |
-| **Level 1 (L1)**         | On-call Engineer            | Alert triggered                  | Immediate       |
-| **Level 2 (L2)**         | Senior Engineer / App Owner | Alert unresolved > 15 mins       | 15 minutes      |
-| **Level 3 (L3)**         | DevOps / SRE Lead           | Alert unresolved > 30 mins       | 30 minutes      |
-| **Level 4 (Management)** | IT Manager / CTO            | Major outage continues > 60 mins | 1 hour          |
-
----
 
 ## Process of App Monitoring using Alertmanager
 
