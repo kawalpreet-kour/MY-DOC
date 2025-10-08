@@ -60,17 +60,17 @@ When a defined threshold is breached, an alert is generated and sent to **Alertm
 
 ## Common Alert Rules for Applications
 
-| Alert Rule                 | Condition / Threshold Example | Severity | Notification Channel | Escalation        |
-| -------------------------- | ----------------------------- | -------- | -------------------- | ----------------- |
-| **High CPU Usage**         | CPU > 80% for 5 min           | High     | Slack / PagerDuty    | L1 → L2 after 15m |
-| **Memory Utilization**     | Memory > 90%                  | Critical | PagerDuty / SMS      | Immediate to L2   |
-| **Service Down**           | Health check fail for 1 min   | Critical | Email + Slack        | L1 → L2 instantly |
-| **High Error Rate**        | HTTP 5xx > 5%                 | Critical | Slack / Email        | L1 → L2 (10m)     |
-| **High Latency**           | Response time > 2s            | Medium   | Slack                | L1 only           |
-| **Disk Space Low**         | Disk usage > 85%              | High     | Email                | L1 → L2 (20m)     |
-| **DB Connection Failures** | > 50 errors/min               | Critical | PagerDuty            | Immediate         |
-| **Queue Lag**              | Queue length > threshold      | Medium   | Slack                | L1 only           |
-| **App Restart Detected**   | Restart count > 3/hr          | Low      | Email                | L1 review daily   |
+| Alert Rule                 | Condition / Threshold Example | Purpose                          | Priority  | Escalation Time     |
+|----------------------------|-------------------------------|---------------------------------|----------|------------------|
+| High CPU Usage             | CPU > 80% for 5 min           | CPU overload affecting performance | High     | 15 minutes       |
+| Memory Utilization         | Memory > 90%                  | Prevent app crashes due to memory | Critical | Immediate        |
+| Service Down               | Health check fail for 1 min   | App/API unavailable             | Critical | Immediate        |
+| High Error Rate            | HTTP 5xx > 5%                 | Too many errors affecting users | Critical | 10 minutes       |
+| High Latency               | Response time > 2s            | Slow response impacting UX      | Medium   | 30 minutes       |
+| Disk Space Low             | Disk usage > 85%              | Avoid storage-related failures  | High     | 20 minutes       |
+| DB Connection Failures     | > 50 errors/min               | Database issues impacting app   | Critical | Immediate        |
+| Queue Lag                  | Queue length > threshold      | Processing delays               | Medium   | 30 minutes       |
+| App Restart Detected       | Restart count > 3/hr          | App instability                 | Low      | Review daily     |
 
 ---
 
